@@ -1,0 +1,17 @@
+#config/locales/activerecord/ja.yml
+
+# モデルは全て activerecord 以下に記述する。
+# これにより、User.model_name.human / User.human_attribute_name({attr_name})で使用可能。
+
+ja:
+  activerecord:
+    models:
+      user: 'ユーザー'
+      board: '掲示板'
+    attributes:
+      user:
+        email: 'メールアドレス'
+        password: 'パスワード'
+        password_confirmation: 'パスワード確認'
+        last_name: '姓'
+        first_name: '名'
