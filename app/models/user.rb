@@ -1,5 +1,7 @@
 class User < ApplicationRecord
   authenticates_with_sorcery!
+  has_many :boards
+
   with_options presence: true do
     validates :last_name, length: {maximum: 255 }
     validates :first_name, length: {maximum: 255 }
