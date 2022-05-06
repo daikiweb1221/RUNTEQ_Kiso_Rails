@@ -6,4 +6,5 @@ post 'login', to: 'user_sessions#create'
 delete 'logout', to: 'user_sessions#destroy'
 
 resources :users, only: [:new, :create]
+resources :boards, only: [:index]
 end
