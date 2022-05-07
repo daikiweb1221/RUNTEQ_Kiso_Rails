@@ -1,25 +1,29 @@
-  <!-- 掲示板一覧 -->>
+  <!-- 掲示板一覧 -->
         <div class="col-sm-12 col-lg-4 mb-3">
           <div id="board-id-<%= board.id %>">
             <div class="card">
             <%= image_tag 'board_placeholder.png',size: '300x200', class: "card-img-top" %>
               <div class="card-body">
                 <h4 class="card-title">
-                <%= link_to "#{board.title}", '#'%>
+                  <a href="#">
+                  <%= board.title %>
+                  </a>
                 </h4>
                 <div class='mr10 float-right'>
-                  <%= link_to '#', id: "button-edit-#{board.id}" do %>
-                    <%= icon 'fa', 'pen' %>
-                  <% end %>
-                  <%= link_to '#', id: "button-delete-#{board.id}", method: :delete, data: {confirm: ''} do %>
-                    <%= icon 'fas', 'trash' %>
-                  <% end %>
+                  <a href="#"><%= icon 'fas', 'trash', class: 'pr-1' %></a>
+                  <a href="#"><%= icon 'fa', 'pen' %></a>
                 </div>
-                <ul class="list-inline">
-                  <li class="list-inline-item"><i class="far fa-user"></i><%= "#{board.user.decorate.full_name}" %></li>
-                  <li class="list-inline-item"><i class="far fa-calendar"></i> <%= "#{board.created_at}"%></li>
-                </ul>
-                <p class="card-text"><%= "#{board.body}" %></p>
+                  <ul class="list-inline">
+                    <li class="list-inline-item">
+                      <%= icon 'far', 'user' %>
+                      <%= board.user.decorate.full_name %>
+                    </li>
+                    <li class="list-inline-item">
+                      <%= icon 'far', 'calendar' %>
+                      <%= l board.created_at, format: :long %>
+                    </li>
+                  </ul>
+                <p class="card-text"><%= board.body %></p>
               </div>
             </div>
           </div>

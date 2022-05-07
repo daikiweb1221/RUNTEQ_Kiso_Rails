@@ -34,9 +34,6 @@ module RunteqNormal
     # Please use `Rails.root.join('path/to')` instead.と言われたら、下記のようにする。
     config.i18n.load_path += Dir[Rails.root.join('config/locales/**/*.{rb,yml}').to_s]
 
-    config.time_zone = 'Tokyo'
-    config.active_record.default_timezone = :local
-
     config.generators do |g|
       g.assets false
       # CSS/JSファイルを生成しない
@@ -54,6 +51,7 @@ end
     # the framework and any gems in your application.
 
     # Don't generate system test files.
-  end
+    config.time_zone = 'Tokyo'	
+    config.active_record.default_timezone = :local
   end
 end
