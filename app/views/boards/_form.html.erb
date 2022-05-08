@@ -1,4 +1,5 @@
 <%= form_with model: board, local: true do |f|%>
+<%= render 'layouts/error_messages', model: f.object %>
       <div class="form-group">
         <%= f.label :title, class: 'board_title' %>
         <%= f.text_field :title, class: 'form-control', id: 'board_title'%>
