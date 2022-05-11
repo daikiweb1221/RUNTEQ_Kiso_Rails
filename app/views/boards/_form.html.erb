@@ -11,9 +11,14 @@
       <div class="form-group">
         <%= f.label :board_image %>
         <%= f.file_field :board_image, id: 'board_board_image' %>
+        <%= f.hidden_field :board_image_cache %>
       </div>
       <div class="form-group">
-        <%= image_tag 'board_placeholder', size: '300x200',id: 'preview_img' %>
+        <%= f.file_field :board_image, onchange: 'previewImage()', class: 'form-control mb-3', accept: 'image/*' %>
+        <%= image_tag board.board_image.url,
+                  class: 'rounded-circle',
+                  id: 'preview',
+                  size: '100x100' %>
       </div>
 
       <%= f.submit (t 'defaults.create'), class: 'btn btn-primary' %>
