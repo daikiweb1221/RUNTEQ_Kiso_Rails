@@ -4,6 +4,7 @@ ja:
     register: '登録'
     logout: 'ログアウト'
     create: '作成'
+    comment: '投稿'
     massage:
       require_login: 'ログインしてください'
       created: "%{item}を作成しました"
@@ -34,8 +35,14 @@ ja:
       fail: '掲示板を作成できませんでした'
     new:
       title: '掲示板作成'
+    show:
+      title: '掲示板詳細'
     bookmarks:
       title: 'ブックマーク一覧'
   profiles:
     show:
       title: 'プロフィール'
+  comments:
+    create:
+      success: 'コメントを作成しました'
+      fail: 'コメントを作成できませんでした'
