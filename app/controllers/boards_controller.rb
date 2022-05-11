@@ -29,6 +29,7 @@ end
     params.require(:board).permit(
       :title,
       :body,
+      :board_image
     )
   end
 end

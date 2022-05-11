@@ -8,6 +8,13 @@
         <%= f.label :body, class: 'board_body' %>
         <%= f.text_area :body, class: 'form-control', id: 'board_body', rows: "10" %>
       </div>
+      <div class="form-group">
+        <%= f.label :board_image %>
+        <%= f.file_field :board_image, id: 'board_board_image' %>
+      </div>
+      <div class="form-group">
+        <%= image_tag 'board_placeholder', size: '300x200',id: 'preview_img' %>
+      </div>
 
       <%= f.submit (t 'defaults.create'), class: 'btn btn-primary' %>
         <% end %>
