@@ -15,7 +15,7 @@ class BoardImageUploader < CarrierWave::Uploader::Base
   end
 
   def default_url
-    'sample.jpg'
+    'board_placeholder.png'
 end
 
 def extension_whitelist
