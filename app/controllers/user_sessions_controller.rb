@@ -16,6 +16,6 @@ end
 def destroy
   if logout
   redirect_to root_path, success: t('.success')
- end
+end
 end
 end

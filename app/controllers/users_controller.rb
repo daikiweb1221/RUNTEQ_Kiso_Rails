@@ -5,13 +5,13 @@ class UsersController < ApplicationController
   end
 
   def create
-   @user = User.new(user_params)
-   if @user.save
+    @user = User.new(user_params)
+    if @user.save
     redirect_to login_path, success: t('.success')
-   else
+    else
     flash.now[:danger] = t('.fail')
     render :new
-   end
+    end
   end
 
   private 
