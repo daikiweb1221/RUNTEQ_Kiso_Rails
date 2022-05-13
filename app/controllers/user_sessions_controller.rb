@@ -11,11 +11,11 @@ class UserSessionsController < ApplicationController
       flash.now[:danger] = t('.fail')
       render :new
     end
-end
+  end
 
-def destroy
+  def destroy
   if logout
   redirect_to root_path, success: t('.success')
-end
+  end
 end
 end
