@@ -1,4 +1,6 @@
 class BoardsController < ApplicationController
+  before_action :set_board, only: [:show, :edit, :update, :destroy]
+
   def index
     @boards = Board.all.includes(:user).order(created_at: :desc)
   end
@@ -18,7 +20,6 @@ class BoardsController < ApplicationController
 end
 
   def show
-    @board = Board.find(params[:id])
     @comment = Comment.new
     @comments = @board.comments.includes(:user).order(created_at: :desc)
   end
@@ -27,6 +28,11 @@ end
   end
 
   private
+
+  def set_board
+    @board = current_user.boards.find(params[:id])
+  end
+
   def board_params
     params.require(:board).permit(
       :title,
