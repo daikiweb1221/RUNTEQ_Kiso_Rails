@@ -9,6 +9,9 @@ ja:
       require_login: 'ログインしてください'
       created: "%{item}を作成しました"
       not_created: "%{item}を作成できませんでした"
+  static_pages:
+    top:
+      title: 
   users:
     new:
       title: 'ユーザー登録'
