@@ -1,4 +1,3 @@
-<% if current_user.id == board.user_id%>
 <ul class='crud-menu-btn list-inline float-right'>
   <li class="list-inline-item">
     <%= link_to edit_board_path(board), id: "button-edit-#{board.id}" do %>
@@ -11,4 +10,3 @@
     <% end %>
   </li>
 </ul>
-<% end %>

@@ -29,7 +29,7 @@ end
 
   def update
     if @board.update(board_params)
-    redirect_to board_path(@board), success: t('.success')
+    redirect_to @board, success: t('.success')
     else
     flash.now[:danger] = t('.fail')
     render :edit
@@ -37,7 +37,7 @@ end
   end
 
   def destroy
-    @board.destroy
+    @board.destroy!
     redirect_to boards_path, success: t('.delete')
   end
 
