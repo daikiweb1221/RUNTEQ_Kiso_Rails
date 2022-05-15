@@ -5,13 +5,14 @@ ja:
     logout: 'ログアウト'
     create: '作成'
     comment: '投稿'
+    update: '更新する'
     massage:
       require_login: 'ログインしてください'
       created: "%{item}を作成しました"
       not_created: "%{item}を作成できませんでした"
   static_pages:
     top:
-      title: 
+      title:
   users:
     new:
       title: 'ユーザー登録'
@@ -42,6 +43,11 @@ ja:
       title: '掲示板詳細'
     edit:
       title: '掲示板編集'
+    update:
+      success: '掲示板を更新しました'
+      fail: '掲示板を更新できませんでした'
+    destroy:
+      delete: '掲示板を削除しました'
     bookmarks:
       title: 'ブックマーク一覧'
   profiles:

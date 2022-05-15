@@ -1,8 +1,8 @@
 class BoardsController < ApplicationController
-  before_action :set_board, only: [:show, :edit, :update, :destroy]
+  before_action :set_board, only: [:edit, :update, :destroy]
 
   def index
-    @boards = Board.all.includes(:user).order(created_at: :desc)
+    @boards = Board.includes(:user).order(created_at: :desc)
   end
 
   def new
@@ -20,11 +20,25 @@ class BoardsController < ApplicationController
 end
 
   def show
+    @board = Board.find(params[:id])
     @comment = Comment.new
     @comments = @board.comments.includes(:user).order(created_at: :desc)
   end
 
-  def edit
+  def edit; end
+
+  def update
+    if @board.update(board_params)
+    redirect_to board_path(@board), success: t('.success')
+    else
+    flash.now[:danger] = t('.fail')
+    render :edit
+    end
+  end
+
+  def destroy
+    @board.destroy
+    redirect_to boards_path, success: t('.delete')
   end
 
   private
@@ -38,7 +52,7 @@ end
       :title,
       :body,
       :board_image,
-      :board_image_cache
+      :board_image_cache,
     )
   end
 end
