@@ -7,7 +7,14 @@ delete 'logout', to: 'user_sessions#destroy'
 
 resources :users, only: %i[new create]
 
-resources :boards do
-  resources :comments, only: %i[create], shallow: true
-end
+  resources :boards do
+    resources :comments, only: %i[create], shallow: true
+
+    # /boards/bookmarksのURLを作っている。このURLのブックマークの一覧を表示する。
+    collection do
+      get 'bookmarks'
+    end
+  end
+  # ブックマークのcreateアクションとdestroyアクション
+  resources :bookmarks, only: %i[create destroy]
 end

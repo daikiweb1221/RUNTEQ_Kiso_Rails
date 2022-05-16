@@ -29,7 +29,7 @@ ja:
       success: 'ログインしました'
       fail: 'ログインに失敗しました'
     destroy:
-      success: 'ログアウトしました'  
+      success: 'ログアウトしました'
   boards:
     index:
       title: '掲示板一覧'
@@ -50,6 +50,12 @@ ja:
       delete: '掲示板を削除しました'
     bookmarks:
       title: 'ブックマーク一覧'
+      no_result: 'ブックマーク中の掲示板がありません。'
+  bookmarks:
+    create:
+      success: 'ブックマークしました'
+    destroy:
+      success: 'ブックマークを外しました'
   profiles:
     show:
       title: 'プロフィール'
