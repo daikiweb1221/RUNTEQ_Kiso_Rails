@@ -19,7 +19,7 @@ ja:
       to_login_page: 'ログインページへ'
     create:
       success: 'ユーザー登録が完了しました'
-      fail: 'ユーザー登録に失敗しました'  
+      fail: 'ユーザー登録に失敗しました'
   user_sessions:
     new:
       title: 'ログイン'
