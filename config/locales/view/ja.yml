@@ -5,6 +5,7 @@ ja:
     logout: 'ログアウト'
     create: '作成'
     comment: '投稿'
+    search_word: '検索ワード'
     update: '更新する'
     massage:
       require_login: 'ログインしてください'
