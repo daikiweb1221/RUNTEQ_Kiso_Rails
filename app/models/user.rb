@@ -17,6 +17,7 @@ class User < ApplicationRecord
   validates :email, uniqueness: true
   validates :email, presence: true
   mount_uploader :avatar, AvatarUploader
+  validates :reset_password_token, presence: true, uniqueness: true, allow_nil: true
 
   def own?(object)
     id == object.user_id

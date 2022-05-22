@@ -8,6 +8,7 @@ ja:
     search_word: '検索ワード'
     update: '更新する'
     profile: 'プロフィール'
+    password_reset: 'パスワードリセット'
     massage:
       require_login: 'ログインしてください'
       created: "%{item}を作成しました"
@@ -74,3 +75,14 @@ ja:
     create:
       success: 'コメントを作成しました'
       fail: 'コメントを作成できませんでした'
+  password_resets:
+    new:
+      title: 'パスワードリセット申請'
+      submit: '送信'
+    edit:
+      title: 'パスワードリセット'
+    create:
+      success: 'パスワードリセット手順を送信しました'
+    update:
+      success: 'パスワードを変更しました'
+      fail: 'パスワードの変更に失敗しました'

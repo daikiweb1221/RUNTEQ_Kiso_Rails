@@ -6,7 +6,6 @@ post 'login', to: 'user_sessions#create'
 delete 'logout', to: 'user_sessions#destroy'
 
 resources :users, only: %i[new create]
-resource :profile, only: %i[show edit update]
   resources :boards do
     resources :comments, only: %i[create destroy], shallow: true
 
@@ -17,4 +16,9 @@ resource :profile, only: %i[show edit update]
   end
   # ブックマークのcreateアクションとdestroyアクション
   resources :bookmarks, only: %i[create destroy]
+  resource :profile, only: %i[show edit update]
+  resources :password_resets, only: %i[new create edit update]
+
+  mount LetterOpenerWeb::Engine, at: "/letter_opener" if Rails.env.development?
+
 end
