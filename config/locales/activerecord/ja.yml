@@ -9,6 +9,11 @@ ja:
       user: 'ユーザー'
       board: '掲示板'
       comment: 'コメント'
+  enums:
+    user:
+      role:
+        general: '一般'
+        admin: '管理者'
     attributes:
       user:
         email: 'メールアドレス'

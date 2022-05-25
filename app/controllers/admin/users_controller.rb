@@ -21,7 +21,7 @@ before_action :set_user, only: [:show, :edit, :update, :destroy]
 
   def destroy
     @user.destroy!
-    redirect_to admin_user_path, success: t('.delete')
+    redirect_to admin_users_path, success: t('.delete')
   end
 
   private
