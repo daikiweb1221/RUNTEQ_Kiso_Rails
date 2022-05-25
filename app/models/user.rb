@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+
   authenticates_with_sorcery!
   has_many :boards, dependent: :destroy
   has_many :comments, dependent: :destroy
@@ -19,6 +20,8 @@ class User < ApplicationRecord
   mount_uploader :avatar, AvatarUploader
   validates :reset_password_token, presence: true, uniqueness: true, allow_nil: true
 
+  enum role: { general: 0, admin: 1 }
+
   def own?(object)
     id == object.user_id
   end
@@ -34,5 +37,4 @@ class User < ApplicationRecord
   def bookmark?(board)
     bookmark_boards.include?(board)
   end
-
 end

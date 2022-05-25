@@ -9,10 +9,13 @@ ja:
     update: '更新する'
     profile: 'プロフィール'
     password_reset: 'パスワードリセット'
-    massage:
+    message:
       require_login: 'ログインしてください'
       created: "%{item}を作成しました"
       not_created: "%{item}を作成できませんでした"
+      deleted: "%{item}を削除しました"
+      delete_confirm: '削除しますか？'
+      not_authorized: '権限がありません'
   static_pages:
     top:
       title:
@@ -86,3 +89,15 @@ ja:
     update:
       success: 'パスワードを変更しました'
       fail: 'パスワードの変更に失敗しました'
+  admin:
+    user_sessions:
+      new:
+        title: 'ログイン'
+      create:
+        success: 'ログインしました'
+        fail: 'ログインに失敗しました'
+      destroy:
+        success: 'ログアウトしました'
+    dashboards:
+        index:
+          title: 'ダッシュボード'
