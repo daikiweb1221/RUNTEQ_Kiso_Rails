@@ -13,16 +13,16 @@
           <td><%= @board.id %></td>
         </tr>
         <tr>
-          <th scope="row"><%= Board.human_attribute_name(:role) %></th>
-          <td><%= @board.role_i18n %></td>
+          <th scope="row"><%= Board.human_attribute_name(:title) %></th>
+          <td><%= @board.title %></td>
         </tr>
         <tr>
-          <th scope="row"><%= Board.human_attribute_name(:full_name) %></th>
-          <td><%= @board.decorate.full_name %></td>
+          <th scope="row"><%= Board.human_attribute_name(:user) %></th>
+          <td><%= @board.user.decorate.full_name %></td>
         </tr>
         <tr>
-          <th scope="row"><%= Board.human_attribute_name(:avatar) %></th>
-          <td><%= image_tag @board.avatar.url %></td>
+          <th scope="row"><%= Board.human_attribute_name(:body) %></th>
+          <td><%= @board.body %></td>
         </tr>
         <tr>
           <th scope="row"><%= Board.human_attribute_name(:created_at) %></th>

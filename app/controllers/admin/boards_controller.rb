@@ -1,4 +1,4 @@
-class Admin::BoardsController < ApplicationController
+class Admin::BoardsController < Admin::BaseController
   before_action :set_board, only: [:edit, :show, :update, :destroy]
 
   def index

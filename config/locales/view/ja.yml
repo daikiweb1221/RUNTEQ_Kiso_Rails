@@ -6,9 +6,13 @@ ja:
     create: '作成'
     comment: '投稿'
     search_word: '検索ワード'
+    show: '詳細'
+    edit: '編集'
+    delete: '削除'
     update: '更新する'
     profile: 'プロフィール'
     password_reset: 'パスワードリセット'
+    unspecified: '指定なし'
     message:
       require_login: 'ログインしてください'
       created: "%{item}を作成しました"
@@ -108,6 +112,9 @@ ja:
         title: 'ユーザー詳細'
       edit:
         title: 'ユーザー編集'
+      update:
+        success: 'ユーザーを更新しました'
+        fail: 'ユーザーを更新できませんでした'
     boards:
       index:
         title: '掲示板一覧'
@@ -115,3 +122,6 @@ ja:
         title: '掲示板詳細'
       edit:
         title: '掲示板編集'
+      update:
+        success: '掲示板を更新しました'
+        fail: '掲示板を更新できませんでした'

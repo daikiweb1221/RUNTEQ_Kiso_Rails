@@ -3,7 +3,7 @@
     <%= board.id %>
   </td>
   <td>
-    <%= board.user.full_name %>
+    <%= board.user.decorate.full_name %>
   </td>
   <td>
     <%= l board.created_at, format: :long %>
