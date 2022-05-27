@@ -32,7 +32,8 @@ before_action :set_user, only: [:show, :edit, :update, :destroy]
       :first_name,
       :last_name,
       :avatar,
-      :avatar_cache
+      :avatar_cache,
+      :role
     )
   end
 
